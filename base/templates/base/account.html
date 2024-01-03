@@ -1,0 +1,39 @@
+{% extends 'base/main.html' %}
+{% block content %}
+    <div class="section">
+        <h1>My Account</h1>
+        <img class="user-avatar--lg" src="{{user.avatar.url}}" />
+
+        <a class="btn btn--warning" href="{% url 'update-account' %}">Update</a>
+        <a class="btn btn--warning" href="{% url 'reset-password' %}">Reset Password</a>
+        <a class="btn btn--warning" href="{% url 'profile' user.id %}">View Profile</a>
+
+    </div>
+    <div class="section" id="events--lists">
+        <h4>My Events</h4>
+        {% for event in user.events.all %}
+            <a href="{% url 'event' event.id %}">
+                <div>
+                    {{event.name}}
+                </div>
+            </a>
+        {% empty %}
+            <p>You haven't registered for any event </p>
+        {% endfor %}
+    </div>
+
+    <div class="section" id="submissions--lists">
+        <h4>My Submissions</h4>
+        {% for sub in user.submissions.all %}
+            <a href="{% url 'update-submission' sub.id %}">
+                <div>
+                    {{sub.event.name}}
+                </div>
+            </a>
+        {% empty %}
+            <p>You don't have submitted any projects yet</p>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
+ 

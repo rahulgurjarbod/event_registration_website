@@ -1,0 +1,11 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <a href="{% url 'event' et.id %}">Go back</a>
+        <input type="submit" value="Confirm">
+    </form>
+
+{% endblock content %}

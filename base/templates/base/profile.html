@@ -1,0 +1,46 @@
+{% extends 'base/main.html' %}
+{% block content %}
+    
+    <div class="section" >
+        <img class="user-avatar--lg" src="{{user.avatar.url}}" />
+        <h3>{{user.name}}</h3>
+    </div>
+
+    <div class="section">
+        <p>{{user.bio}}</p>
+    </div>
+
+    <div class="section">
+
+        {% if user.github %}
+        <div>
+            <a href="{{user.github}}" target="_blank">Github</a>
+        </div>
+        {% endif %}
+
+        {% if user.website %}
+        <div>
+            <a href="{{user.website}}" target="_blank">Website</a>
+        </div>
+        {% endif %}
+
+        {% if user.linkedin %}
+        <div>
+            <a href="{{user.linkedin}}" target="_blank">Linkedin</a>
+        </div>
+        {% endif %}
+
+        {% if user.twitter %}
+        <div>
+            <a href="{{user.twitter}}" target="_blank">Twitter</a>
+        </div>
+        {% endif %}
+
+        {% if user.facebook %}
+        <div>
+            <a href="{{user.facebook}}" target="_blank">Facebook</a>
+        </div>
+        {% endif %}
+    </div>
+    
+{% endblock content %}

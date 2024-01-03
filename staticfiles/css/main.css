@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Readex Pro';
+    background-color: rgb(249, 250, 251);
+} 
+
+.section{
+    margin: 1em 0;
+}
+
+.container--main{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Navbar Styling */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+/* Home Page Styling */
+
+.events--lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.wrapper--event{
+    border: 1px solid rgb(218, 218, 218);
+    padding: 1em;
+    border-radius: 5px;
+}
+
+/* User Page Styling */
+.wrapper--user{
+    border: 1px solid rgb(219, 219, 218);
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.users--lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.user--avatar--sm{
+    height: 40 px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    inline-size: 1.5cm;
+
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: red;
+    color: black;
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+
+.btn--warning{
+    background-color: #ffe900;
+}
+
+.btn--primary{
+    background-color: steelblue;
+    color: #fff;
+}
+
+.text--success{
+    color: 198754;
+}
+
+/* Event Page Styling */
+#event--action--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1200px) {
+    .container--main{
+        width: 100%;
+    }
+}
+
